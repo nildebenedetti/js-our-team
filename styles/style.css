@@ -3,4 +3,8 @@
 :root {
     --bs-primary: #6f21a3;
     --bs-primary-rgb: 104, 33, 163;
+    /* colore sfondo card */
+    --bs-light: #f9f3ee;
+    --bs-light-rgb: 249, 243, 238;
 }
+
