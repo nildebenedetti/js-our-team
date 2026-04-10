@@ -4,7 +4,7 @@
 
 // identifico le variabili che mi servono nel dom
 
-const mainContainer = document.querySelector('.page-main');
+const mainContainer = document.querySelector('.cards-container');
 let tempContentContainer = '';
 
 
