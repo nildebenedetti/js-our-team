@@ -5,11 +5,12 @@
 // identifico le variabili che mi servono nel dom
 
 const mainContainer = document.querySelector('.page-main');
+let tempContentContainer = '';
 
 
 for (const teamMember of teamMembers) {
 
-   const currentCard = `<div class="card container d-inline-flex flex-row bg-light">
+   tempContentContainer += `<div class="card container d-inline-flex flex-row bg-light">
                     <div class="image-container">
                         <img src="${teamMember.img}" alt="${teamMember.name}" class="portrait img-fluid">
                     </div>
@@ -19,6 +20,6 @@ for (const teamMember of teamMembers) {
                         <a href="mailto:${teamMember.email}" class="email pt-2 text-info">${teamMember.email}</a>
                     </div>
             </div>`;
-            console.log(currentCard)
 
 }
+mainContainer.innerHTML = tempContentContainer; 
