@@ -10,11 +10,11 @@ let tempContentContainer = '';
 
 for (const teamMember of teamMembers) {
 
-   tempContentContainer += `<div class="card container d-inline-flex flex-row bg-light">
-                    <div class="image-container">
-                        <img src="${teamMember.img}" alt="${teamMember.name}" class="portrait img-fluid">
+   tempContentContainer += `<div class="card row bg-light">
+                    <div class="image-container col-4">
+                        <img src="${teamMember.img}" alt="${teamMember.name}" class="portrait">
                     </div>
-                    <div class="member-info p-4 flex-grow-1">
+                    <div class="member-info p-4 col-8">
                         <h3 class="name-surname py-2 fw-bold">${teamMember.name}</h3>
                         <h5 class="role py-1">Designer</h4>
                         <a href="mailto:${teamMember.email}" class="email pt-2 text-info">${teamMember.email}</a>

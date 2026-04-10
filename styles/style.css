@@ -8,3 +8,7 @@
     --bs-light-rgb: 249, 243, 238;
 }
 
+
+.card {
+    max-width: 400px;
+}
