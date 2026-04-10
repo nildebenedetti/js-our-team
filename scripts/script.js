@@ -12,7 +12,7 @@ for (const teamMember of teamMembers) {
 
    tempContentContainer += `<div class="card bg-light m-3">
                     <div class="image-container">
-                        <img src="${teamMember.img}" alt="${teamMember.name}" class="portrait">
+                        <img src="${teamMember.img}" alt="${teamMember.name}" class="portrait img-fluid">
                     </div>
                     <div class="member-info px-2 py-3">
                         <h3 class="name-surname py-2 fw-bold">${teamMember.name}</h3>

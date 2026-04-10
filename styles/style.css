@@ -10,22 +10,20 @@
 
 
 .card {
-    max-width: 600px;
+    width: 400px;
     display: flex;
     flex-direction: row;
+
 }
 
 .card > * {
     width: 40%;
     height:100%
-    display: inline-block;
-}
-.portrait {
-    width:100%;
+    
 }
 
 .img-container {
-    width: 40%;
+    width: 30%;
 }
 
 .member-info {
