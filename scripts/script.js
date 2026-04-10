@@ -10,7 +10,7 @@ let tempContentContainer = '';
 
 for (const teamMember of teamMembers) {
 
-   tempContentContainer += `<div class="card row bg-light m-3">
+   tempContentContainer += `<div class="card bg-light m-3">
                     <div class="image-container">
                         <img src="${teamMember.img}" alt="${teamMember.name}" class="portrait">
                     </div>
