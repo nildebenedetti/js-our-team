@@ -5,6 +5,7 @@
 // identifico le variabili che mi servono nel dom
 
 const mainContainer = document.querySelector('.cards-container');
+const btnAdd = document.querySelector('.btn-add');
 let tempContentContainer = '';
 
 
@@ -23,3 +24,5 @@ for (const teamMember of teamMembers) {
 
 }
 mainContainer.innerHTML = tempContentContainer; 
+
+
