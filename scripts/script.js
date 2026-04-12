@@ -10,16 +10,16 @@ let tempContentContainer = '';
 
 for (const teamMember of teamMembers) {
 
-    tempContentContainer += `<div class="d-flex bg-light m-3 p-0">
-                    <div class="image-container">
-                        <img src="${teamMember.img}" alt="${teamMember.name}" class="portrait img-fluid">
-                    </div>
-                    <div class="member-info px-2 py-3">
-                        <h3 class="name-surname py-2 fw-bold">${teamMember.name}</h3>
-                        <h5 class="role py-1">${teamMember.role}</h4>
-                        <a href="mailto:${teamMember.email}" class="email pt-2 text-info">${teamMember.email}</a>
-                    </div>
-            </div>`;
+    tempContentContainer += `<div class="custom-card">
+    <div class="card-image">
+        <img src="${teamMember.img}" alt="${teamMember.name}">
+    </div>
+    <div class="card-content">
+        <h3 class="name">${teamMember.name}</h3>
+        <p class="role">${teamMember.role}</p>
+        <a href="mailto:${teamMember.email}" class="email">${teamMember.email}</a>
+    </div>
+</div>`;
 
 }
 mainContainer.innerHTML = tempContentContainer; 
