@@ -1,18 +1,28 @@
 /* variabili*/
 
 :root {
-    --bs-primary: #6f21a3;
-    --bs-primary-rgb: 104, 33, 163;
+    --bs-primary: #aa9cfc;
+    --bs-primary-rgb: 170, 156, 252;
     /* colore sfondo card */
-    --bs-light: #f9f3ee;
+    --bs-light: #b5b7a7;
     --bs-light-rgb: 249, 243, 238;
+    /* togliere il bordo bianco*/
+    
 }
 
+/* background */
+
+body {
+    background-color: #e4d3c6;
+    
+}
 
 .card {
     width: 400px;
+    height:150px;
     display: flex;
     flex-direction: row;
+    padding: 0px; !important
 
 }
 
@@ -24,7 +34,11 @@
 
 .img-container {
     width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
+
 
 .member-info {
     flex-grow: 1;
