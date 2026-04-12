@@ -25,4 +25,9 @@ for (const teamMember of teamMembers) {
 }
 mainContainer.innerHTML = tempContentContainer; 
 
+addEventListener('click', btnClickHandler);
 
+function btnClickHandler(event) {
+    console.log('click!!!!');
+    
+}
