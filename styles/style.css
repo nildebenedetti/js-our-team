@@ -78,4 +78,22 @@ body {
     border: none;
     color: #666;
     cursor: pointer;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 0px #dcdcdc; 
+    transition: all 0.1s ease; /* Rende il movimento fluido */
+    position: relative;
+    top: 0;
+}
+
+/* 2. Effetto al passaggio del mouse */
+.btn-add:hover {
+    background-color: #f0f0f0;
+}
+
+/* 3. L'effetto "Click" (3D) */
+.btn-add:active {
+    /* Si sposta verso il basso di 3px */
+    top: 3px; 
+    /* L'ombra si accorcia per dare l'idea che il tasto tocchi il fondo */
+    box-shadow: 0 1px 0px #dcdcdc; 
 }
