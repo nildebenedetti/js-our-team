@@ -7,6 +7,14 @@
 const mainContainer = document.querySelector('.cards-container');
 const btnAdd = document.querySelector('.btn-add');
 const memberForm = document.querySelector('.form-container');
+const formData = {
+    nameEl: document.querySelector('#member-name'),
+    roleEl: document.querySelector('#member-role'),
+    emailEl: document.querySelector('#member-email'),
+    imageEl: document.querySelector('#member-portrait')
+}
+
+
 let tempContentContainer = '';
 
 // per ogni membro del team, creo un card e la aggiungo 
