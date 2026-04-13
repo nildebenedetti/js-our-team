@@ -11,7 +11,7 @@ const formDataEl = {
     nameEl: document.querySelector('#member-name'),
     roleEl: document.querySelector('#member-role'),
     emailEl: document.querySelector('#member-email'),
-    imageEl: document.querySelector('#member-portrait')
+    imageEl: document.querySelector('#member-portrait'),
     formEl: document.querySelector('.new-member')
 }
 
@@ -84,14 +84,17 @@ function renderTeams(team) {
 renderTeams(teamMembers);
 
 
-
-
-
-// sposto btn clickhandler per ordine
+// event listener per i vari bottoni
 addEventListener('click', btnClickHandler);
+formDataEl.formEl.addEventListener('click', formSubmitHandler);
 
+// funzione per mostraqre il form 
 function btnClickHandler(event) {
     memberForm.classList.remove('d-none');
     console.log('form in arrivo!');
 }
 
+// funzione per submit del form
+function formSubmitHandler(event) {
+    event.prevemtDefault();
+}
