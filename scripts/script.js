@@ -12,6 +12,8 @@ let tempContentContainer = '';
 // per ogni membro del team, creo un card e la aggiungo 
 // alla variabile contenuto temporaneo
 
+/*
+
 for (const teamMember of teamMembers) {
 
     tempContentContainer += `<div class="custom-card">
@@ -31,7 +33,25 @@ for (const teamMember of teamMembers) {
 
 mainContainer.innerHTML = tempContentContainer;
 
-addEventListener('click', btnClickHandler);
+addEventListener('click', btnClickHandler); */
+
+
+
+// creo una funzione per creare una nuova member card
+function createMemberCard(utente) {
+    return `<div class="custom-card">
+            <div class="card-image">
+                <img src="${utente.img}" alt="${utente.name}">
+            </div>
+            <div class="card-content">
+                <h3 class="name">${utente.name}</h3>
+                <p class="role">${utente.role}</p>
+                <a href="mailto:${utente.email}" class="email">${utente.email}</a>
+            </div>
+        </div>`
+
+
+}
 
 function btnClickHandler(event) {
     modalForm.classList.remove('d-none');
