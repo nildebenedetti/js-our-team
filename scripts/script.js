@@ -6,6 +6,7 @@
 
 const mainContainer = document.querySelector('.cards-container');
 const btnAdd = document.querySelector('.btn-add');
+const modalForm = document.querySelector('.modal-dialog');
 let tempContentContainer = '';
 
 
@@ -28,6 +29,6 @@ mainContainer.innerHTML = tempContentContainer;
 addEventListener('click', btnClickHandler);
 
 function btnClickHandler(event) {
-    console.log('click!!!!');
+    
     
 }
