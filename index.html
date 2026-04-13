@@ -31,18 +31,37 @@
     </header>
     <main class="page-main container">
         <div class="cards-container row mx-auto row-cols-sm-1row-cols-md-3 justify-content-center">
-                    <!-- sparisceeee la card team member-->
+            <!-- sparisceeee la card team member-->
         </div>
         <div class="button-container d-flex justify-content-center mb-5">
             <button class="btn-add">Aggiungi</button>
         </div>
 
         <!-- Vertically centered scrollable modal -->
-<div class="modal-dialog modal-dialog-centered modal-dialog-scrollabl d-none">
-  ...
-</div>
-        
-        
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollabl d-none">
+            <!-- con dentro form -->
+            <form action="" class="new-member">
+                <form>
+                     <div class="mb-3">
+                        <label for="member-name" class="form-label">Nome e Cognome</label>
+                        <input type="text" class="member-name" id="member-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="member-role" class="form-label">Ruolo</label>
+                        <input type="text" class="member-role" id="member-role">
+                    </div>
+                    <div class="mb-3">
+                        <label for="member-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="member-email" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                   
+                    <button type="submit" class="btn btn-submit btn-primary">Submit</button>
+                </form>
+            </form>
+        </div>
+
+
     </main>
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
