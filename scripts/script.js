@@ -99,11 +99,30 @@ function formSubmitHandler(event) {
     event.preventDefault();
 
     // prendiamo i valori da inserire nella card
+    //con validazione della stringa e se 
+    // e'falso esci
+    const [nameResult, nameValue] = validateStringa(formDataEl.nameEl.value);
 
-    const nameValue = formDataEl.nameEl.value;
-    const roleValue = formDataEl.roleEl.value;
-    const emailValue = formDataEl.emailEl.value;
-    const imageValue = formDataEl.imageEl.value;
+    if (nameResult === false) {
+        return;
+    }
+
+    const [roleResult, roleValue] = validateStringa(formDataEl.roleEl.value);
+
+    if (roleResult === false) {
+        return;
+    }
+    const [emailResult, emailValue] = validateStringa(formDataEl.emailEl.value);
+
+    if (emailResult === false) {
+        return;
+    }
+
+    const [ImageResult, imageValue] = validateStringa(formDataEl.imageEl.value);
+
+    if (ImageResult === false) {
+        return;
+    }
 
     // validazione
 
@@ -111,8 +130,8 @@ function formSubmitHandler(event) {
 
     // lo aggiungo all'array
     console.log(nameValue, roleValue, emailValue, imageValue);
-    
-    
+
+
 }
 
 // funzione di validazione
