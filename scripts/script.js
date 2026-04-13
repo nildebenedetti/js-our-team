@@ -124,12 +124,24 @@ function formSubmitHandler(event) {
         return;
     }
 
+    if (nameResult === false || roleResult === false || emailResult === false || ImageResult === false) {
+        console.error('dati non validi!');
+        
+    }
+
+
     // validazione
 
     // creo oggetto
+    const newMember = {
+        name: nameValue,
+        role: roleValue,
+        email: emailValue,
+        image: imageValue
+    }
 
     // lo aggiungo all'array
-    console.log(nameValue, roleValue, emailValue, imageValue);
+    console.log(newMember);
 
 
 }
