@@ -141,7 +141,10 @@ function formSubmitHandler(event) {
     }
 
     // lo aggiungo all'array
-    console.log(newMember);
+    teamMembers.push(newMember);
+
+    console.log(teamMembers);
+    
 
 
 }
