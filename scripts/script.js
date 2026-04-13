@@ -12,6 +12,7 @@ const formDataEl = {
     roleEl: document.querySelector('#member-role'),
     emailEl: document.querySelector('#member-email'),
     imageEl: document.querySelector('#member-portrait')
+    formEl: document.querySelector('.new-member')
 }
 
 
