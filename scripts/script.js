@@ -50,6 +50,15 @@ function createMemberCard(utente) {
 // mi creo variabile stringa di appoggio per contenuto html
 let listItemsHtml = '';
 
+// itero con il ciclo for per array team con funzione creazione 
+// card cosi da creare una card per ogni oggeto 
+// + add in accumulatore
+
+for (let member of teamMembers) {
+    let listItemsHtml = createMemberCard(member) // per ogni persona attiva la funzione
+    listItemsHtml += listItemsHtml; // aggiungi anche questa al contenuto temporaneo
+}
+
 // sposto btn clickhandler per ordine
 addEventListener('click', btnClickHandler); 
 
