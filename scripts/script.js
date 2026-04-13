@@ -145,6 +145,7 @@ function formSubmitHandler(event) {
 
     console.log(teamMembers);
     
+    renderTeams(teamMembers);
 
 
 }
