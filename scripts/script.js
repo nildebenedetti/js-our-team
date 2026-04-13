@@ -48,20 +48,21 @@ function createMemberCard(utente) {
         </div>`
 }
 
-// mi creo variabile stringa di appoggio per contenuto html
-let listItemsHtml = '';
+
 
 
 // aggiungo unzione per creare le card di tutto il team
 
-function renderTeams() {
+function renderTeams(team) {
+    // mi creo variabile stringa di appoggio per contenuto html
+    let listItemsHtml = '';
     // itero con il ciclo for per array team con funzione creazione 
     // card cosi da creare una card per ogni oggeto 
     // + add in accumulatore
 
-    for (let member of teamMembers) {
-        let listItemsHtml = createMemberCard(member) // per ogni persona attiva la funzione
-        listItemsHtml += listItemsHtml; // aggiungi anche questa al contenuto temporaneo
+    for (let member of team) {
+        // per ogni persona attiva la funzione
+        listItemsHtml += createMemberCard(member); // aggiungi anche questa al contenuto temporaneo
     }
 
     // identifico rife3rimento e inietto html di tutta la stringa del team
@@ -71,7 +72,9 @@ function renderTeams() {
 
 // e poi chiamo la funzione
 
-renderTeams();
+renderTeams(teamMembers);
+
+
 
 
 
@@ -82,3 +85,4 @@ function btnClickHandler(event) {
     memberForm.classList.remove('d-none');
     console.log('form in arrivo!');
 }
+
