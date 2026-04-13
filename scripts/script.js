@@ -114,3 +114,15 @@ function formSubmitHandler(event) {
     
     
 }
+
+// funzione di validazione
+
+function validateStringa(stringa) {
+    const stringaTrimmed = stringa.trim();
+
+    if (stringaTrimmed === '') {
+        return false;
+    }
+
+    return [true, stringaTrimmed];
+}
