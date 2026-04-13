@@ -97,6 +97,20 @@ function btnClickHandler(event) {
 // funzione per submit del form
 function formSubmitHandler(event) {
     event.preventDefault();
-    console.log('submit');
+
+    // prendiamo i valori da inserire nella card
+
+    const nameValue = formDataEl.nameEl.value;
+    const roleValue = formDataEl.roleEl.value;
+    const emailValue = formDataEl.emailEl.value;
+    const imageValue = formDataEl.imageEl.value;
+
+    // validazione
+
+    // creo oggetto
+
+    // lo aggiungo all'array
+    console.log(nameValue, roleValue, emailValue, imageValue);
+    
     
 }
