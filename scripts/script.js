@@ -86,7 +86,7 @@ renderTeams(teamMembers);
 
 // event listener per i vari bottoni
 addEventListener('click', btnClickHandler);
-formDataEl.formEl.addEventListener('click', formSubmitHandler);
+formDataEl.formEl.addEventListener('submit', formSubmitHandler);
 
 // funzione per mostraqre il form 
 function btnClickHandler(event) {
@@ -96,5 +96,7 @@ function btnClickHandler(event) {
 
 // funzione per submit del form
 function formSubmitHandler(event) {
-    event.prevemtDefault();
+    event.preventDefault();
+    console.log('submit');
+    
 }
