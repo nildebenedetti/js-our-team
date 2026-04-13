@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 
 // per ogni oggetto, voglio creare la mia card 
 
@@ -58,6 +58,11 @@ for (let member of teamMembers) {
     let listItemsHtml = createMemberCard(member) // per ogni persona attiva la funzione
     listItemsHtml += listItemsHtml; // aggiungi anche questa al contenuto temporaneo
 }
+
+// identifico rife3rimento e inietto html di tutta la stringa del team
+
+mainContainer.innerHTML = listItemsHtml;
+
 
 // sposto btn clickhandler per ordine
 addEventListener('click', btnClickHandler); 
