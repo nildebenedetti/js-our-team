@@ -31,11 +31,7 @@ for (const teamMember of teamMembers) {
 
 // iniettiamo il contenuto temporaneo delláccumulatore nell'html
 
-mainContainer.innerHTML = tempContentContainer;
-
-addEventListener('click', btnClickHandler); */
-
-
+mainContainer.innerHTML = tempContentContainer; */
 
 // creo una funzione per creare una nuova member card
 function createMemberCard(utente) {
@@ -49,9 +45,13 @@ function createMemberCard(utente) {
                 <a href="mailto:${utente.email}" class="email">${utente.email}</a>
             </div>
         </div>`
-
-
 }
+
+// mi creo variabile stringa di appoggio per contenuto html
+let listItemsHtml = '';
+
+// sposto btn clickhandler per ordine
+addEventListener('click', btnClickHandler); 
 
 function btnClickHandler(event) {
     modalForm.classList.remove('d-none');
