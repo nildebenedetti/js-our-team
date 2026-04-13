@@ -6,7 +6,7 @@
 
 const mainContainer = document.querySelector('.cards-container');
 const btnAdd = document.querySelector('.btn-add');
-const modalForm = document.querySelector('.modal-dialog');
+const memberForm = document.querySelector('.new-member');
 let tempContentContainer = '';
 
 // per ogni membro del team, creo un card e la aggiungo 
@@ -35,7 +35,8 @@ mainContainer.innerHTML = tempContentContainer; */
 
 // creo una funzione per creare una nuova member card
 function createMemberCard(utente) {
-    return `<div class="custom-card">
+    return `
+    <div class="custom-card">
             <div class="card-image">
                 <img src="${utente.img}" alt="${utente.name}">
             </div>
@@ -50,24 +51,34 @@ function createMemberCard(utente) {
 // mi creo variabile stringa di appoggio per contenuto html
 let listItemsHtml = '';
 
-// itero con il ciclo for per array team con funzione creazione 
-// card cosi da creare una card per ogni oggeto 
-// + add in accumulatore
 
-for (let member of teamMembers) {
-    let listItemsHtml = createMemberCard(member) // per ogni persona attiva la funzione
-    listItemsHtml += listItemsHtml; // aggiungi anche questa al contenuto temporaneo
+// aggiungo unzione per creare le card di tutto il team
+
+function renderTeams() {
+    // itero con il ciclo for per array team con funzione creazione 
+    // card cosi da creare una card per ogni oggeto 
+    // + add in accumulatore
+
+    for (let member of teamMembers) {
+        let listItemsHtml = createMemberCard(member) // per ogni persona attiva la funzione
+        listItemsHtml += listItemsHtml; // aggiungi anche questa al contenuto temporaneo
+    }
+
+    // identifico rife3rimento e inietto html di tutta la stringa del team
+
+    mainContainer.innerHTML = listItemsHtml;
 }
 
-// identifico rife3rimento e inietto html di tutta la stringa del team
+// e poi chiamo la funzione
 
-mainContainer.innerHTML = listItemsHtml;
+renderTeams();
+
 
 
 // sposto btn clickhandler per ordine
-addEventListener('click', btnClickHandler); 
+addEventListener('click', btnClickHandler);
 
 function btnClickHandler(event) {
-    modalForm.classList.remove('d-none');
+    memberForm.classList.remove('d-none');
     console.log('form in arrivo!');
 }
