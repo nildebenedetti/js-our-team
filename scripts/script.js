@@ -137,7 +137,7 @@ function formSubmitHandler(event) {
         name: nameValue,
         role: roleValue,
         email: emailValue,
-        image: imageValue
+        img: imageValue
     }
 
     // lo aggiungo all'array
