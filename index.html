@@ -40,7 +40,7 @@
 
         <!-- con dentro form -->
         <section class="form-container d-none">
-            <form action="" class="new-member">
+            <form class="new-member">
                 <div class="mb-3">
                     <label for="member-name" class="form-label">Nome e Cognome</label>
                     <input type="text" class="member-name" id="member-name">
@@ -51,14 +51,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="member-email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="member-email" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="member-email" aria-describedby="member-email">
                 </div>
-                  <div class="mb-3">
+                <div class="mb-3">
                     <label for="member-portrait" class="form-label">Foto</label>
-                    <input type="text" class="image" id="member-portrait" aria-describedby="portrait">
+                    <input type="text" class="image" placeholder="url dell'immagine" id="member-portrait"
+                        aria-describedby="member-portrait">
                 </div>
-                </div>
-
                 <button type="submit" class="btn btn-submit">Invia</button>
             </form>
         </section>
